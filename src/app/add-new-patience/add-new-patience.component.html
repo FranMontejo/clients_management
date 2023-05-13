@@ -1,38 +1,40 @@
 <div class="container">
-  <div class="title-div">
-    <h1 class="title">Añadir nuevo paciente</h1>
-  </div>
-  <div class="row">
-    <div class="col-2">
-      <div class="form-group">
-        <label for="nombre">Nombre:</label>
-        <input type="text" class="input-text" id="nombre" name="nombre">
+  <form #newPatient="ngForm" (ngSubmit)="saveNewPatient(newPatient)">
+    <div class="title-div">
+      <h1 class="title">Añadir nuevo paciente</h1>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" class="input-text" id="nombre" name="nombre" placeholder="Juan Francisco" ngModel required>
+        </div>
+        <div class="form-group">
+          <label for="apellido">Apellido:</label>
+          <input type="text" class="input-text" id="apellido" name="apellido" placeholder="Telechea" ngModel required>
+        </div>
+        <div class="form-group">
+          <label for="fechanac">Fecha de nacimiento:</label>
+          <input type="text" class="input-text" id="fechanac" name="fechanac" placeholder="dd/mm/yyyy" ngModel required>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="apellido">Apellido:</label>
-        <input type="text" class="input-text" id="apellido" name="apellido">
+      <div class="col-2">
+        <div class="form-group">
+          <label for="nrodoc">Número de documento:</label>
+          <input type="text" class="input-text" id="nrodoc" name="nrodoc" placeholder="Sin puntos..." ngModel required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="input-text" id="email" name="email" placeholder="juanT@gmail.com" ngModel required>
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono:</label>
+          <input type="text" class="input-text" id="telefono" name="telefono" placeholder="3425099027" ngModel required>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="fechanac">Fecha de nacimiento:</label>
-        <input type="text" class="input-text" id="fechanac" name="fechanac">
+      <div class="col-2">
+      <button type="submit" class="b1">Guardar</button>
       </div>
     </div>
-    <div class="col-2">
-      <div class="form-group">
-        <label for="nrodoc">Número de documento:</label>
-        <input type="text" class="input-text" id="nrodoc" name="nrodoc">
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="text" class="input-text" id="email" name="email">
-      </div>
-      <div class="form-group">
-        <label for="telefono">Teléfono:</label>
-        <input type="text" class="input-text" id="telefono" name="telefono">
-      </div>
-    </div>
-    <div class="col-2">
-      <button class="b1">Guardar</button>
-    </div>
-  </div>
+  </form>
 </div>
