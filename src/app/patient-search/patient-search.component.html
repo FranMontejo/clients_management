@@ -3,6 +3,13 @@
 
 </div>
 <div class="container">
-  <input id="search" class="input-text" placeholder="Buscar uno o más pacientes...">
-  <button class="b1">Buscar</button>
+  <input id="search" class="input-text" [(ngModel)]="searchValue" placeholder="Buscar uno o más pacientes...">
+  <button type="submit" class="b1" (click)="onSearch()">Buscar</button>
+</div>
+<div *ngIf="patients.length != 0" >
+  <div class="results" *ngFor="let patient of patients">
+    <label class="input-label">Id: {{ patient.id}} </label>
+    <label class="input-label">Nombre: {{ patient.name}} </label>
+    <label class="input-label">Teléfono: {{ patient.phone}} </label>
+  </div>
 </div>

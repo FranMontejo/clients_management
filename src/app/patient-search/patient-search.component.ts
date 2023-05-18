@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Patient } from './../models/Patient';
+import { Component , inject } from '@angular/core';
 
 @Component({
   selector: 'app-patient-search',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class PatientSearchComponent {
 
+  patients: Patient[] = [];
+  searchValue: String = "";
+  http = inject(HttpClient);
+  onSearch(){
+    console.log(this.searchValue);
+    this.http.get("https://jsonplaceholder.typicode.com/users").subscribe(
+      (json:any) => {
+        this.patients = json;
+      }
+    )
+  }
 }

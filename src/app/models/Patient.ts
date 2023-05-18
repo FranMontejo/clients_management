@@ -6,5 +6,5 @@ export interface Patient{
     dni: string,
     email: string,
     birthdate: Date,
-    
+    phone: number
 }

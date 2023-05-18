@@ -97,6 +97,7 @@ li a {
 .title-div{
   display: flex;
   justify-content: center;
+  margin-top: 3rem;
 }
 .container {
   max-width: 1200px;

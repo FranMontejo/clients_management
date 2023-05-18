@@ -7,6 +7,10 @@
   display: flex;
   width: 80%;
 }
-.title-div{
-  margin-top: 3rem!important;
+.input-label{
+  font-size: large;
+}
+.results{
+  display: flex;
+  justify-content: center;
 }
