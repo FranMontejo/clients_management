@@ -1,0 +1,12 @@
+.input-text {
+  width: 70%;
+  margin-right: 2rem;
+}
+.container{
+  justify-content: center;
+  display: flex;
+  width: 80%;
+}
+.title-div{
+  margin-top: 3rem!important;
+}

@@ -1,11 +1,5 @@
-.container {
-  max-width: 1200px;
-  margin: 2rem auto;
-}
-.title-div{
-  display: flex;
-  justify-content: center;
-}
+
+
 .row {
   display: flex;
   flex-wrap: wrap;

@@ -94,8 +94,14 @@ li a {
   font-size: 20px;
   margin-bottom: 20px;
 }
-
-
+.title-div{
+  display: flex;
+  justify-content: center;
+}
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
 
 .list {
   list-style: none;
@@ -150,5 +156,5 @@ li a {
 }
 body{
   margin: 0;
-  background-color: #f5fcf0;
+  background-color: #e0e0e9;
 }
